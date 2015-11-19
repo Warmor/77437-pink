@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><h1>PINK</h1></div>
+      <button></button>
+      <nav>
+        <ul>
+          <li><a href="#">ИНФОРМАЦИЯ</a></li>
+          <li><a href="#">БЛОГ</a></li>
+          <li><a href="#">ОТЗЫВЫ</a></li>
+          <li><a href="#">КОНКУРС</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
+  </header>
+  <main>
+    <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+    <form action="">
+      <section class="name">
+        <div class="content">
+          <label>ИМЯ: *<input type="text" name="name" placeholder="Введите ваше имя" required></label>
+          <label>ФАМИЛИЯ: *<input type="text" name="surname" placeholder="Укажите фамилию" required></label>
+          <label>ОТЧЕСТВО:<input type="text" name="patronymic" placeholder="Ну и отчество тоже"></label>
+        </div>
+      </section>
+      <section class="app">
+        <div class="content">
+          <p>С каким приложением путешествовали? *</p>
+          <label><input type="radio" name="app">Pink для iOS</label>
+          <label><input type="radio" name="app" checked>Pink на Android</label>
+          <label><input type="radio" name="app">Windows Phone</label>
+        </div>
+      </section>
+      <section class="time-travel">
+        <div class="content">
+          <p>Когда вы путешествовали? *</p>
+          <label><input type="text" name="date-out" placeholder="1 апреля 2015" required>дата выезда</label>
+          <label><input type="number" name="duration" placeholder="10 дней" required>Продолжительность</label>
+          <label><input type="text" name="date-ret" placeholder="10 апреля 2015" disabled>Дата Возвращения</label>
+        </div>
+      </section>
+      <section class="companion">
+        <div class="content">
+          <p>Количество попутчиков *</p>
+          <input type="number" name="duration" placeholder="10 дней" required>
+          <div class="companion-item">
+            <p>№</p>
+            <span>1</span>
+            <label>ИМЯ: *<input type="text" name="name" placeholder="Введите имя" required></label>
+            <label>ПРОЗВИЩЕ:<input type="text" name="nick" placeholder="Ну как же без этого!"></label>
+          </div>
+          <div class="companion-item">
+            <p>№</p>
+            <span>2</span>
+            <label>ИМЯ: *<input type="text" name="name" placeholder="Введите имя" required></label>
+            <label>ПРОЗВИЩЕ:<input type="text" name="nick" placeholder="Ну как же без этого!"></label>
+          </div>
+        </div>
+      </section>
+      <section class="achievement">
+        <div class="content">
+          <p>Ваши безбашенные достижения в путешествии</p>
+          <label><input type="checkbox" name="1">Сделал селфи с акулой</label>
+          <label><input type="checkbox" name="2">Обгорел на пляже</label>
+          <label><input type="checkbox" name="3">Видел Чака Норриса</label>
+          <label><input type="checkbox" name="4">Накупил сувениров</label>
+          <label><input type="checkbox" name="5">Удержал башню</label>
+          <label><input type="checkbox" name="6">Разгромил отель</label>
+        </div>
+      </section>
+      <section class="download">
+        <div class="content">
+          <p>ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</p>
+          <label>ЗАГРУЗИТЬ ФОТО<input type="file"></label>
+          <figure class="download-item">
+            <img src="./img/IMG-1.jpg" alt="">
+            <figcaption>IMG-1.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-2.jpg" alt="">
+            <figcaption>IMG-2.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-3.jpg" alt="">
+            <figcaption>IMG-3.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-4.jpg" alt="">
+            <figcaption>IMG-4.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-5.jpg" alt="">
+            <figcaption>IMG-5.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-6.jpg" alt="">
+            <figcaption>IMG-6.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-7.jpg" alt="">
+            <figcaption>IMG-7.jpg</figcaption>
+          </figure>
+          <figure class="download-item">
+            <img src="./img/IMG-8.jpg" alt="">
+            <figcaption>IMG-8.jpg</figcaption>
+          </figure>
+        </div>
+      </section>
+      <input type="submit" value="ОТПРАВИТЬ ФОРМУ">
+    </form>
+    <p>* — обязательные поля</p>
+  </main>
+  <footer>
+    <div class="content">
+      <a class="logo" href="">pink</a>
+      <div class="cocial">
+        <a class="twitter" href="">twitter</a>
+        <a class="facebook" href="">facebook</a>
+        <a class="vector" href="">vector</a>
+      </div>
+      <div class="developed">
+        <a class="htmlacademy" href="">Разработано</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
