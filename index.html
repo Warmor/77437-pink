@@ -5,86 +5,91 @@
   <title>HTML Academy: Пинк</title>
 </head>
 <body>
-  <header>
-    <div>
-      <a href="index.html">PINK</a>
-      <button></button>
-      <nav>
-        <ul>
-          <li><a href="index.html">ИНФОРМАЦИЯ</a></li>
-          <li><a href="blog.html">БЛОГ</a></li>
-          <li><a href="#">ОТЗЫВЫ</a></li>
-          <li><a href="form.html">КОНКУРС</a></li>
+  <header class="main-header">
+    <div class="navigation">
+      <a class="logo" href="index.html">PINK</a>
+      <button class="navigation__toogle"></button>
+      <nav  class="navbar">
+        <ul  class="navbar__list">
+          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
+          <li class="navbar__item"><a href="blog.html">БЛОГ</a></li>
+          <li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li>
+          <li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
         </ul>
       </nav>
     </div>
     <h1>Взгляните на жизнь иначе!</h1>
   </header>
-  <main>
-    <div>
-      <article>
-        <a href="#" class="btn">Скачать приложение</a>
-        <img src="./img/apple-logo.png" alt="Apple">
-        <img src="./img/android-logo.png" alt="Android">
-        <img src="./img/microsoft-logo.png" alt="WinPhone">
-        <p>
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+  <main  class="main-content">
+    <article class="download">
+      <a href="#" class="download__btn">Скачать приложение</a>
+      <img class="dowload__item dowload__item--apple" src="./img/apple-logo.png" alt="Apple">
+      <img class="dowload__item dowload__item--android" src="./img/android-logo.png" alt="Android">
+      <img class="dowload__item dowload__item--win" src="./img/microsoft-logo.png" alt="WinPhone">
+      <p class="download__text">
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </p>
+    </article>
+    <article class="features">
+      <article class="slogan">
+        <h2 class="slogan__text">Устали от серости мегаполиса?</h2>
+        <h2 class="slogan__text">Нам есть, что вам предложить!</h2>
       </article>
-    </div>
-    <div>
-      <article>
-        <h2>Устали от серости мегаполиса?</h2>
-        <h2>Нам есть, что вам предложить!</h2>
-        <h3>Поднимает настроение</h3>
-        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-        <h3>Меняет мир вокруг</h3>
-        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        <h3>Заводит новых друзей</h3>
-        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      <h3 class="features__title">Поднимает настроение</h3>
+      <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      <h3 class="features__title">Меняет мир вокруг</h3>
+      <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      <h3 class="features__title">Заводит новых друзей</h3>
+      <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      <article class="review">
+        <h2 class="review__autor">Николай Петров</h2>
+        <p class="review__post">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <div class="review__btn"></div>
       </article>
-      <article>
-        <h2>Николай Петров</h2>
-        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-      </article>
-      <article>
-        <table>
-          <tr>
-            <th></th>
-            <th>
-              <h3>Стандарт</h3>
-              <span>3,99 USD</span>
+      <article calss="option">
+        <table class="option__table">
+          <tr class="option__row">
+            <th class="option__th">
+              <h3 class="option__title">База</h3>
+              <p class="option__prices">1,99 USD</p>
             </th>
-            <th></th>
+            <th class="option__th option__th--hit">
+              <h3 class="option__title">Стандарт</h3>
+              <p class="option__prices">3,99 USD</p>
+            </th>
+            <th class="option__th">
+              <h3 class="option__title">Анлим</h3>
+              <p class="option__prices">9,99 USD</p>
+            </th>
           </tr>
-          <tr>
-            <td></td>
-            <td>Розовый фильтр</td>
-            <td></td>
+          <tr class="option__row">
+            <td class="option__td  option__td--yes">Розовый фильтр</td>
+            <td class="option__td  option__td--yes">Розовый фильтр</td>
+            <td class="option__td  option__td--yes">Розовый фильтр</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Смайлики</td>
-            <td></td>
+          <tr class="option__row">
+            <td class="option__td  option__td--no" >Смайлики</td>
+            <td class="option__td  option__td--yes">Смайлики</td>
+            <td class="option__td  option__td--yes">Смайлики</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Комментарии</td>
-            <td></td>
+          <tr class="option__row">
+            <td class="option__td  option__td--no">Комментарии</td>
+            <td class="option__td  option__td--no" >Комментарии</td>
+            <td class="option__td  option__td--yes">Комментарии</td>
           </tr>
         </table>
       </article>
-      <article>
-        <h2>Остались вопросы?Свяжитесь с нами!</h2>
-        <h3>Звоните:</h3>
-        <a>+7 (812) 555-66-66</a>
-        <h3>Пишите:</h3>
-        <p>mail@htmlacademy.ru</p>
-        <h3>Приезжайте в гости:</h3>
-        <p>ул. Большая Конюшенная, 19/8</p>
-      </article>
-    </div>
-    <article>
+    </article>
+    <article class="contact">
+      <h2 class="contact_header">Остались вопросы?Свяжитесь с нами!</h2>
+      <h3 class="contact__title">Звоните:</h3>
+      <a class="contact__item">+7 (812) 555-66-66</a>
+      <h3 class="contact__title">Пишите:</h3>
+      <p class="contact__item">mail@htmlacademy.ru</p>
+      <h3 class="contact__title">Приезжайте в гости:</h3>
+      <p class="contact__item">ул. Большая Конюшенная, 19/8</p>
+    </article>
+    <article class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6591009166805!2d30.320996793164582!3d59.93655975852257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x14541b47a2366484!2sSubway!5e0!3m2!1sru!2sru!4v1447519494170" width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
     </article>
   </main>
