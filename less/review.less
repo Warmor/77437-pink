@@ -1,0 +1,54 @@
+.review{
+  padding-top: 45px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  width: 320px;
+  margin: 0 auto;
+  &__post{
+    padding: 0 20px;
+    display: none;
+  }
+  &__autor{
+    font-size: 18px;
+    padding-bottom: 13px;
+  }
+  &__text{
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 30px;
+  }
+  &__btn{
+    padding: 33px 0;
+    label{
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      background: #bec2c7;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin: 4px;
+      cursor: pointer;
+    }
+  }
+  &__radio-1:checked ~ .review__post-1{
+    display: inline-block;
+  }
+  &__radio-2:checked ~ .review__post-2{
+    display: inline-block;
+  }
+  &__radio-3:checked ~ .review__post-3{
+    display: inline-block;
+  }
+  &__radio-1:checked ~ .review__btn .a{
+    background: @c-mine-bg;
+    border: 3px solid @c-gray-l;
+  }
+  &__radio-2:checked ~ .review__btn .b{
+    background: @c-mine-bg;
+    border: 3px solid @c-gray-l;
+  }
+  &__radio-3:checked ~ .review__btn .c{
+    background: @c-mine-bg;
+    border: 3px solid @c-gray-l;
+  }
+}

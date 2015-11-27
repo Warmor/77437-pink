@@ -3,89 +3,114 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <div class="navigation">
-      <a class="logo" href="index.html">PINK</a>
-      <button class="navigation__toogle"></button>
+      <a class="logo" href="index.html"><img src="./img/logo.png" alt="PINK"></a>
+      <input class="inp-toogle"type="checkbox" id="toogle" hidden>
+      <label for="toogle"><span class="navigation__toogle"></span></label>
       <nav  class="navbar">
         <ul  class="navbar__list">
-          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
-          <li class="navbar__item"><a href="blog.html">БЛОГ</a></li>
-          <li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li>
-          <li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
+          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li><li class="navbar__item"><a href="blog.html">БЛОГ</a></li><li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li><li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
         </ul>
       </nav>
     </div>
-    <h1>Взгляните на жизнь иначе!</h1>
-  </header>
-  <main  class="main-content">
+    <div class="promo"><h1>Взгляните на жизнь иначе!</h1></div>
+    <div class="iphone"></div>
     <article class="download">
       <a href="#" class="download__btn">Скачать приложение</a>
-      <img class="dowload__item dowload__item--apple" src="./img/apple-logo.png" alt="Apple">
-      <img class="dowload__item dowload__item--android" src="./img/android-logo.png" alt="Android">
-      <img class="dowload__item dowload__item--win" src="./img/microsoft-logo.png" alt="WinPhone">
-      <p class="download__text">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
+      <img class="download__item download__item--apple" src="./img/apple-logo.png" alt="Apple">
+      <img class="download__item download__item--android" src="./img/android-logo.png" alt="Android">
+      <img class="download__item download__item--win" src="./img/microsoft-logo.png" alt="WinPhone">
+      <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </article>
+  </header>
+  <main  class="main-content">
+    <article class="slogan">
+      <h2 class="slogan__text">Устали от серости мегаполиса?</h2>
+      <h2 class="slogan__text">Нам есть, что вам предложить!</h2>
     </article>
     <article class="features">
-      <article class="slogan">
-        <h2 class="slogan__text">Устали от серости мегаполиса?</h2>
-        <h2 class="slogan__text">Нам есть, что вам предложить!</h2>
-      </article>
       <h3 class="features__title">Поднимает настроение</h3>
       <p class="features__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
       <h3 class="features__title">Меняет мир вокруг</h3>
       <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
       <h3 class="features__title">Заводит новых друзей</h3>
       <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      <article class="review">
+    </article>
+    <article class="review">
+      <input class="review__radio-1" id="1" name="review__radio" type="radio" hidden checked="">
+      <input class="review__radio-2" id="2" name="review__radio" type="radio" hidden>
+      <input class="review__radio-3" id="3" name="review__radio" type="radio" hidden>
+      <div class="review__post review__post-1">
         <h2 class="review__autor">Николай Петров</h2>
-        <p class="review__post">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        <div class="review__btn"></div>
-      </article>
-      <article calss="option">
-        <table class="option__table">
-          <tr class="option__row">
-            <th class="option__th">
-              <h3 class="option__title">База</h3>
-              <p class="option__prices">1,99 USD</p>
-            </th>
-            <th class="option__th option__th--hit">
-              <h3 class="option__title">Стандарт</h3>
-              <p class="option__prices">3,99 USD</p>
-            </th>
-            <th class="option__th">
-              <h3 class="option__title">Анлим</h3>
-              <p class="option__prices">9,99 USD</p>
-            </th>
-          </tr>
-          <tr class="option__row">
-            <td class="option__td  option__td--yes">Розовый фильтр</td>
-            <td class="option__td  option__td--yes">Розовый фильтр</td>
-            <td class="option__td  option__td--yes">Розовый фильтр</td>
-          </tr>
-          <tr class="option__row">
-            <td class="option__td  option__td--no" >Смайлики</td>
-            <td class="option__td  option__td--yes">Смайлики</td>
-            <td class="option__td  option__td--yes">Смайлики</td>
-          </tr>
-          <tr class="option__row">
-            <td class="option__td  option__td--no">Комментарии</td>
-            <td class="option__td  option__td--no" >Комментарии</td>
-            <td class="option__td  option__td--yes">Комментарии</td>
-          </tr>
-        </table>
-      </article>
+        <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </div>
+      <div class="review__post review__post-2">
+        <h2 class="review__autor">Вася Пупкин</h2>
+        <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id laborum soluta odio perspiciatis aspernatur inventore eaque fuga qui, odit eligendi dolorem magni amet natus nobis! Ab, numquam similique optio perspiciatis explicabo velit.</p>
+      </div>
+      <div class="review__post review__post-3">
+        <h2 class="review__autor">Иван Иванов</h2>
+        <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatum soluta non ipsam accusamus quia doloribus, itaque minima eveniet, ullam porro velit, aspernatur natus hic. Deleniti debitis officiis facilis est.</p>
+      </div>
+      <div class="review__btn">
+        <label class="a"for="1"></label>
+        <label class="b"for="2"></label>
+        <label class="c"for="3"></label>
+      </div>
+    </article>
+    <article class="option">
+      <input class="option__radio-4" id="4" name="option__radio" type="radio" hidden>
+      <input class="option__radio-5" id="5" name="option__radio" type="radio" hidden checked="">
+      <input class="option__radio-6" id="6" name="option__radio" type="radio" hidden>
+      <table class="option__table">
+        <tr class="option__row">
+          <th class="option__th">
+            <h3 class="option__title">БАЗА</h3>
+            <p class="option__prices">1,99 USD</p>
+          </th>
+          <th class="option__th option__th--hit">
+            <h3 class="option__title">СТАНДАРТ</h3>
+            <p class="option__prices">3,99 USD</p>
+          </th>
+          <th class="option__th">
+            <h3 class="option__title">АНЛИМ</h3>
+            <p class="option__prices">9,99 USD</p>
+          </th>
+        </tr>
+        <tr class="option__row">
+          <td class="option__td  option__td--yes">РОЗОЫВЙ ФИЛЬТР</td>
+          <td class="option__td  option__td--yes">РОЗОЫВЙ ФИЛЬТР</td>
+          <td class="option__td  option__td--yes">РОЗОЫВЙ ФИЛЬТР</td>
+        </tr>
+        <tr class="option__row">
+          <td class="option__td  option__td--no">СМАЙЛИКИ</td>
+          <td class="option__td  option__td--yes">СМАЙЛИКИ</td>
+          <td class="option__td  option__td--yes">СМАЙЛИКИ</td>
+        </tr>
+        <tr class="option__row">
+          <td class="option__td  option__td--no">КОММЕНТАРИИ</td>
+          <td class="option__td  option__td--no">КОММЕНТАРИИ</td>
+          <td class="option__td  option__td--yes">КОММЕНТАРИИ</td>
+        </tr>
+      </table>
+      <div class="option__btn">
+        <label class="a"for="4"></label>
+        <label class="b"for="5"></label>
+        <label class="c"for="6"></label>
+      </div>
     </article>
     <article class="contact">
-      <h2 class="contact_header">Остались вопросы?Свяжитесь с нами!</h2>
+      <h2 class="contact__header">Остались вопросы? Свяжитесь с нами!</h2>
       <h3 class="contact__title">Звоните:</h3>
-      <a class="contact__item">+7 (812) 555-66-66</a>
+      <p class="contact__item">+7 (812) 555-66-66</p>
       <h3 class="contact__title">Пишите:</h3>
-      <p class="contact__item">mail@htmlacademy.ru</p>
+      <a class="contact__item">mail@htmlacademy.ru</a>
       <h3 class="contact__title">Приезжайте в гости:</h3>
       <p class="contact__item">ул. Большая Конюшенная, 19/8</p>
     </article>

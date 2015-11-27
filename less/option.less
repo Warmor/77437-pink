@@ -1,0 +1,106 @@
+.option{
+  background: @c-mine-bg;
+  padding-top: 73px;
+  padding-bottom: 10px;
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  &__table{
+    border-collapse: separate;
+    width: 830px;
+    position: relative;
+    left:-253px;
+    transition: left 300ms;
+  }
+  &__th{
+    width: 275px;
+    height: 101px;
+    position: relative;
+    background: @c-gray-l;
+    color: @c-white;
+    border: 2px solid @c-mine-bg;
+    overflow: hidden;
+  }
+  &__th--hit{
+    &:before{
+      content: "ХИТ";
+      height: 30px;
+      width: 100px;
+      line-height: 30px;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: -25px;
+      transform: rotate(-45deg);
+      background: #d22856;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &__prices{
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &__title{
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  &__td{
+    height: 60px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: lighter;
+    background: @c-white;
+    border: 2px solid #e5e5e5;
+    padding: 0 20px;
+    &:before{
+      content: "";
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      float: right;
+      position: relative;
+    }
+    &--yes:before{
+      background: url(../img/yes.png) no-repeat;
+    }
+    &--no:before{
+      background: url(../img/no.png) no-repeat;
+    }
+  }
+  &__btn{
+    padding: 33px 0;
+    label{
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      background: #bec2c7;
+      border: 3px solid @c-mine-bg;
+      border-radius: 50%;
+      margin: 4px;
+      cursor: pointer;
+    }
+  }
+  &__radio-4:checked ~ .option__table{
+    left: 20px;
+  }
+  &__radio-5:checked ~ .option__table{
+    left:-255px;
+  }
+  &__radio-6:checked ~ .option__table{
+    left:-530px;
+  }
+  &__radio-4:checked ~ .option__btn .a{
+    background: @c-white;
+    border: 3px solid @c-gray-l;
+  }
+  &__radio-5:checked ~ .option__btn .b{
+    background: @c-white;
+    border: 3px solid @c-gray-l;
+  }
+  &__radio-6:checked ~ .option__btn .c{
+    background: @c-white;
+    border: 3px solid @c-gray-l;
+  }
+}
