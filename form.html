@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <div class="navigation">
-      <a class="logo" href="index.html">PINK</a>
-      <button class="navigation__toogle"></button>
+      <a class="logo" href="index.html"><img src="./img/logo.png" alt="PINK"></a>
+      <input class="inp-toogle"type="checkbox" id="toogle" hidden>
+      <label class="navigation__toogle" for="toogle"></label>
       <nav  class="navbar">
         <ul  class="navbar__list">
-          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li>
-          <li class="navbar__item"><a href="blog.html">БЛОГ</a></li>
-          <li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li>
-          <li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
+          <li class="navbar__item">
+            <a href="index.html">ИНФОРМАЦИЯ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="blog.html">БЛОГ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#">ОТЗЫВЫ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="form.html">КОНКУРС</a>
+          </li>
         </ul>
       </nav>
     </div>
-    <h1>Взгляните на жизнь иначе!</h1>
+    <div class="promo"><h1 class="promo__header">Взгляните на жизнь иначе!</h1></div>
   </header>
   <main class="main-content">
     <form class="main-form" action="">

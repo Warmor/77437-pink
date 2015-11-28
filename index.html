@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -12,14 +11,25 @@
     <div class="navigation">
       <a class="logo" href="index.html"><img src="./img/logo.png" alt="PINK"></a>
       <input class="inp-toogle"type="checkbox" id="toogle" hidden>
-      <label for="toogle"><span class="navigation__toogle"></span></label>
+      <label class="navigation__toogle" for="toogle"></label>
       <nav  class="navbar">
         <ul  class="navbar__list">
-          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li><li class="navbar__item"><a href="blog.html">БЛОГ</a></li><li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li><li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
+          <li class="navbar__item">
+            <a href="index.html">ИНФОРМАЦИЯ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="blog.html">БЛОГ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#">ОТЗЫВЫ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="form.html">КОНКУРС</a>
+          </li>
         </ul>
       </nav>
     </div>
-    <div class="promo"><h1>Взгляните на жизнь иначе!</h1></div>
+    <div class="promo"><h1 class="promo__header">Взгляните на жизнь иначе!</h1></div>
     <div class="iphone"></div>
     <article class="download">
       <a href="#" class="download__btn">Скачать приложение</a>
