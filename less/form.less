@@ -1,0 +1,263 @@
+.grid{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty{
+    width: 68px;
+    margin: 0 5px;
+}
+.label{
+  font-size: 14px;
+  color: @c-pink;
+}
+.input{
+  font-size: 18px;
+  color: @c-gray-l;
+  border: 2px solid @c-grey-border;
+  border-radius: 2px;
+  height: 62px;
+  padding-left: 20px;
+}
+.main-form{
+  padding: 30px 0;
+  &__header{
+    .grid;
+    font-size: 14px;
+    line-height: 2.2;
+    margin: 10px 0;
+  }
+  &__submit{
+    background: #2aab6d;
+    border: none;
+    color: @c-white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 279px;
+    height: 63px;
+    border-radius: 3px;
+    margin: 45px 0;
+  }
+  &__footnote{
+    font-size: 14px;
+    font-weight: 300;
+    .red{
+      .label;
+    }
+  }
+}
+.full-name{
+  .grid;
+  margin: 30px 0;
+  &__label{
+    .label;
+    margin: 10px auto 10px 20px;
+  }
+  &__input{
+    .input;
+    margin-bottom: 15px;
+  }
+}
+.travel-app{
+  .grid;
+  background: @c-mine-bg;
+  &__header{
+    .label;
+    line-height: 1.2;
+    margin: 35px 0;
+  }
+  &__label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  &__radio{
+    .center;
+    width: 40px;
+    height: 40px;
+    background: @c-white;
+    margin-right: 30px;
+    border: 2px solid @c-grey-border;
+    border-radius: 50%;
+  }
+}
+.input-radio:checked + .travel-app__label .travel-app__radio{
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background: @c-pink;
+    border-radius: 50%;
+  }
+}
+.travel-when{
+  .grid;
+  justify-content: center;
+  margin: 20px 0;
+  &__header{
+    color: @c-pink;
+    line-height: 1.7;
+    font-size: 14px;
+    margin: 25px 0 40px;
+  }
+  &__label{
+    .label;
+    margin: 10px 0 27px;
+  }
+  &__input{
+    .input;
+  }
+}
+.counter{
+  display: flex;
+  &__btn{
+    height: 62px;
+    width: 62px;
+    border: 2px solid @c-grey-border;
+    font-size: 0;
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      background-color: @c-mine-bg;
+    }
+  }
+  &__btn--minus{
+    background: @c-white url(../img/minus.png) no-repeat 50% 50%;
+  }
+  &__btn--plus{
+    background: @c-white url(../img/plus.png) no-repeat 50% 50%;
+  }
+  &__input{
+    .input;
+    .center;
+    border-right: none;
+    border-left: none;
+    flex-grow: 1;
+  }
+}
+.travel-companion{
+  background-color: @c-mine-bg;
+  .grid;
+  &__header{
+    .label;
+    line-height: 1;
+    padding: 36px 0px;
+  }
+}
+.companions{
+  margin-top: 50px;
+  border-top: 2px solid @c-grey-border;
+  padding: 23px 0;
+}
+.companion-quantity{
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0 0;
+}
+.left-column{
+  display: flex;
+  flex-direction: column;
+  &__neader{
+    .label;
+    margin: 0 auto 10px 20px;
+  }
+  &__number{
+    .input;
+    .center;
+    padding: 0;
+    border-right: none;
+    width: 62px;
+  }
+}
+.right-column{
+  display: flex;
+  flex-direction: column;
+  &__label{
+    .label;
+    margin: 0 auto 10px 20px;
+  }
+  &__input{
+    .input;
+    margin-bottom: 23px;
+    width: 220px;
+  }
+}
+.achievement{
+  .grid;
+  margin: 20px 0;
+  &__header{
+    .label;
+    margin: 20px 20px;
+  }
+  &__label{
+    display: flex;
+    margin: 22px 0;
+    cursor: pointer;
+  }
+  &__check{
+    width: 39px;
+    height: 39px;
+    border: 2px solid @c-grey-border;
+  }
+  &__text{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+}
+.input-check:checked + .achievement__label .achievement__check{
+  background: url(../img/check.png) no-repeat 50% 50%; 
+}
+.travel-photo{
+  .grid;
+  background-color: @c-mine-bg;
+  padding-top: 35px;
+  padding-bottom: 2px;
+  &__header{
+    .label;
+  }
+  &__download-btn{
+    .input;
+    .center;
+    margin: 35px 0;
+    font-weight: 700;
+    background: @c-white;
+    cursor: pointer;
+  }
+}
+.download-photo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 2px solid @c-grey-border;
+  &__item{
+    font-size: 12px;
+    margin: 12px 5px;
+    position: relative;
+  }
+  &__btn{
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 33px;
+    height: 33px;
+    font-size: 0;
+    border-radius: 50%;
+    border: 2px solid @c-grey-border;
+    background: @c-white url(../img/close.png) no-repeat 50% 50%;
+    &:focus{
+      outline: none;
+    }
+  }
+}
