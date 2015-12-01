@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -11,15 +11,26 @@
   <header class="main-header">
     <div class="navigation">
       <a class="logo" href="index.html"><img src="./img/logo.png" alt="PINK"></a>
-      <input class="inp-toogle"type="checkbox" id="toogle" hidden>
-      <label for="toogle"><span class="navigation__toogle"></span></label>
+      <input class="inp-toogle hidden" type="checkbox" id="toogle">
+      <label class="navigation__toogle" for="toogle"></label>
       <nav  class="navbar">
         <ul  class="navbar__list">
-          <li class="navbar__item"><a href="index.html">ИНФОРМАЦИЯ</a></li><li class="navbar__item"><a href="blog.html">БЛОГ</a></li><li class="navbar__item"><a href="#">ОТЗЫВЫ</a></li><li class="navbar__item"><a href="form.html">КОНКУРС</a></li>
+          <li class="navbar__item">
+            <a href="index.html">ИНФОРМАЦИЯ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="blog.html">БЛОГ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#">ОТЗЫВЫ</a>
+          </li>
+          <li class="navbar__item">
+            <a href="form.html">КОНКУРС</a>
+          </li>
         </ul>
       </nav>
     </div>
-    <div class="promo"><h1>Взгляните на жизнь иначе!</h1></div>
+    <div class="promo promo--index"><h1 class="promo__header">Взгляните на жизнь иначе!</h1></div>
     <div class="iphone"></div>
     <article class="download">
       <a href="#" class="download__btn">Скачать приложение</a>
@@ -43,9 +54,9 @@
       <p class="features__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
     </article>
     <article class="review">
-      <input class="review__radio-1" id="1" name="review__radio" type="radio" hidden checked="">
-      <input class="review__radio-2" id="2" name="review__radio" type="radio" hidden>
-      <input class="review__radio-3" id="3" name="review__radio" type="radio" hidden>
+      <input class="review__radio-1 hidden" id="1" name="review__radio" type="radio" checked>
+      <input class="review__radio-2 hidden" id="2" name="review__radio" type="radio">
+      <input class="review__radio-3 hidden" id="3" name="review__radio" type="radio">
       <div class="review__post review__post-1">
         <h2 class="review__autor">Николай Петров</h2>
         <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -59,15 +70,15 @@
         <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatum soluta non ipsam accusamus quia doloribus, itaque minima eveniet, ullam porro velit, aspernatur natus hic. Deleniti debitis officiis facilis est.</p>
       </div>
       <div class="review__btn">
-        <label class="a"for="1"></label>
-        <label class="b"for="2"></label>
-        <label class="c"for="3"></label>
+        <label class="a" for="1"></label>
+        <label class="b" for="2"></label>
+        <label class="c" for="3"></label>
       </div>
     </article>
     <article class="option">
-      <input class="option__radio-4" id="4" name="option__radio" type="radio" hidden>
-      <input class="option__radio-5" id="5" name="option__radio" type="radio" hidden checked="">
-      <input class="option__radio-6" id="6" name="option__radio" type="radio" hidden>
+      <input class="option__radio-4 hidden" id="4" name="option__radio" type="radio">
+      <input class="option__radio-5 hidden" id="5" name="option__radio" type="radio" checked>
+      <input class="option__radio-6 hidden" id="6" name="option__radio" type="radio">
       <table class="option__table">
         <tr class="option__row">
           <th class="option__th">
@@ -100,9 +111,9 @@
         </tr>
       </table>
       <div class="option__btn">
-        <label class="a"for="4"></label>
-        <label class="b"for="5"></label>
-        <label class="c"for="6"></label>
+        <label class="a" for="4"></label>
+        <label class="b" for="5"></label>
+        <label class="c" for="6"></label>
       </div>
     </article>
     <article class="contact">
