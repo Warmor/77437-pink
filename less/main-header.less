@@ -3,9 +3,18 @@
   background-image: url(../img/background-mobile@1x.jpg);
   background-position: 50% 0%;
   background-repeat: no-repeat, no-repeat;
+  @media only screen and (min-resolution: 1.25dppx){
+    background-image: url(../img/background-mobile@2x.jpg);
+  }
+  @media only screen and (min-resolution: 2.25dppx){
+    background-image: url(../img/background-mobile@3x.jpg);
+  }
   @media (min-width: @screen-sm){
     background-image: url(../img/background-tablet@1x.jpg);
     background-position: 50% 0%;
+    @media only screen and (min-resolution: 1.25dppx){
+      background-image: url(../img/background-tablet@2x.jpg);
+    }
   }
   @media (min-width: @screen-md){
     background-image: url(../img/background-fullsize.jpg);
