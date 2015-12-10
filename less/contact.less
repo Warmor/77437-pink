@@ -1,17 +1,71 @@
 .contact{
-  padding: 40px 20px;
+  padding: 35px 20px;
   &__header{
     font-size: 24px;
     font-weight: lighter;
+    line-height: 31px;
+    padding-bottom: 12px;
   }
   &__title{
     font-size: 18px;
     padding-top: 20px;
   }
-  &__item{
+  &__text{
     font-size: 24px;
     font-weight: lighter;
     color: #d22856;
-
+    text-decoration: none;
+  }
+  @media (min-width: @screen-sm){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 46px 0px 0px;
+    &__header{
+      font-size: 40px;
+      line-height: 48px;
+      width: 100%;
+      padding: 0 50px;
+    }
+    &__item{
+      width: 300px;
+      margin: 23px 10px 4px;
+    }
+    &__text{
+      padding: 0 20px;
+      line-height: 33px;
+    }
+  }
+  @media (min-width: @screen-md){
+    padding: 64px 0px 5px;
+    justify-content: center;
+    align-items: flex-start;
+    &__header{
+      font-size: 50px;
+      line-height: 60px;
+      padding: 0 120px;
+    }
+    &__title{
+      padding: 20px;
+    }
+    &__item{
+      width: 300px;
+      margin: 36px 10px 4px;
+    }
+    &__item:nth-child(2){
+      order: 1;
+    }
+    &__item:nth-child(3){
+      order: 3;
+    }
+    &__item:nth-child(4){
+      order: 2;
+    }
+    &__text{
+      padding: 0 20px;
+      line-height: 33px;
+    }
   }
 }

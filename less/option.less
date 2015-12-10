@@ -1,25 +1,48 @@
+.option-wrapper{
+  background: url(../img/triangle-grey.svg) no-repeat 100% 100%;
+  background-size: cover;
+  @media (min-width: @screen-sm){
+    background-position: 100% 100%;
+  }
+  @media (min-width: @screen-md){
+    background-position: 99% 100%;
+  }
+}
 .option{
-  background: @c-mine-bg;
-  padding-top: 73px;
+  padding-top: 95px;
   padding-bottom: 10px;
-  width: 320px;
-  margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__table{
-    border-collapse: separate;
-    width: 830px;
+    border-collapse: collapse;
+    width: 825px;
     position: relative;
-    left:-253px;
     transition: left 300ms;
+  }
+  &__row{
+    background: @c-gray-l;
   }
   &__th{
     width: 275px;
-    height: 101px;
+    height: 98px;
     position: relative;
-    background: @c-gray-l;
     color: @c-white;
     border: 2px solid @c-mine-bg;
+    border-top: none;
+    border-bottom: none;
     overflow: hidden;
+    &--sm-md{
+      display: none;
+    }
+  }
+  &__prices{
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &__title{
+    font-size: 18px;
   }
   &__th--hit{
     &:before{
@@ -37,36 +60,24 @@
       font-weight: 400;
     }
   }
-  &__prices{
-    font-size: 24px;
-    font-weight: 300;
-  }
-  &__title{
-    font-size: 18px;
-    padding-left: 20px;
-  }
   &__td{
-    height: 60px;
+    height: 61px;
     line-height: 30px;
     text-align: left;
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 300;
     background: @c-white;
     border: 2px solid #e5e5e5;
+    border-top: none;
     padding: 0 20px;
-    &:before{
-      content: "";
-      height: 30px;
-      width: 30px;
-      display: inline-block;
-      float: right;
-      position: relative;
+    &--yes{
+      background: @c-white url(../img/yes.svg) no-repeat 93% 50%;
     }
-    &--yes:before{
-      background: url(../img/yes.png) no-repeat;
+    &--no{
+      background: @c-white url(../img/no.svg) no-repeat 93% 46%;
     }
-    &--no:before{
-      background: url(../img/no.png) no-repeat;
+    &--sm-md{
+      display: none;
     }
   }
   &__btn{
@@ -78,18 +89,18 @@
       background: #bec2c7;
       border: 3px solid @c-mine-bg;
       border-radius: 50%;
-      margin: 4px;
+      margin: 5px;
       cursor: pointer;
     }
   }
   &__radio-4:checked ~ .option__table{
-    left: 20px;
+    left: 280px;
   }
   &__radio-5:checked ~ .option__table{
-    left:-255px;
+    left: 0px;
   }
   &__radio-6:checked ~ .option__table{
-    left:-530px;
+    left:-280px;
   }
 
   &__radio-5:checked ~ .option__btn .b,
@@ -97,5 +108,85 @@
   &__radio-4:checked ~ .option__btn .a{
     background: @c-white;
     border: 3px solid @c-gray-l;
+  }
+}
+@media (min-width: @screen-sm){
+  .option{
+    padding: 93px 0 66px;
+    &__table{
+      position: static;
+      width: 620px;
+    }
+    &__th{
+      width: 155px;
+      height: 79px;
+      &--sm-md{
+        display: table-cell;
+        background: @c-mine-bg;
+      }
+    }
+    &__th--hit{
+      &:before{
+        top: 3px;
+        left: -30px;
+      }
+    }
+    &__title{
+      font-size: 16px;
+    }
+    &__prices{
+      font-size: 18px;
+    }
+    &__td{
+      height: 47px;
+      padding: 0 15px;
+      &--yes,
+      &--no{
+        font-size: 0;
+        background-position: 50% 50%;
+      }
+      &--sm-md{
+        display: table-cell;
+        border: 2px solid #e5e5e5;
+        font-size: 14px;
+      }
+    }
+    &__btn{
+      display: none;
+    }
+  }
+}
+@media (min-width: @screen-md){
+  .option{
+    padding: 151px 0 95px;;
+    &__table{
+      width: 940px;
+    }
+    &__th{
+      width: 235px;
+      height: 98px;
+    }
+    &__th--hit{
+      &:before{
+        top: 13px;
+        left: -29px;
+        height: 30px;
+        width: 110px;
+      }
+    }
+    &__title{
+      font-size: 18px;
+    }
+    &__prices{
+      font-size: 24px;
+    }
+    &__td{
+      font-weight: 400;
+      height: 61px;
+      padding: 0 21px;
+      &--sm-md{
+        font-size: 18px;
+      }
+    }
   }
 }
