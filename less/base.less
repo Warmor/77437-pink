@@ -1,11 +1,75 @@
+body, html{
+  font-family: "Open Sans", "Verdana", "Tahoma", "Arial", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  color: @c-text;
+}
 *, *:before, *:after{
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
-body, html{
-  height: 100%;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  box-sizing: border-box;
+a{
+  color: @c-pink;
+  font-size: 14px;
+  @media (min-width: @screen-md){
+    font-size: 18px;
+  }
+}
+.hidden{
+  display: none;
+}
+.hidden-xs{
+  @media (max-width: @screen-sm){
+    display: none !important;
+    font-size: 0;
+  }
+}
+.md-only{
+  font-size: 0;
+  @media (min-width: @screen-md){
+    font-size: 14px;
+  }
+}
+.layout{
+  max-width: 320px;
+  margin: 0 auto;
+  @media (min-width: @screen-sm){
+    max-width: 660px;
+  }
+  @media (min-width: @screen-md){
+    max-width: 960px;
+  }
+}
+.grid{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  @media (min-width: @screen-md){
+    padding: 0 10px 0px;
+  }
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label{
+  font-size: 14px;
+  color: @c-pink;
+}
+.input{
+  font-size: 18px;
+  color: @c-gray-l;
+  border: 2px solid @c-grey-border;
+  border-radius: 2px;
+  height: 62px;
+  padding-left: 20px;
+}
+.background-wrapper{
+  width: 100%;
+  background: @c-mine-bg;
+  @media (min-width: @screen-sm){
+    background: @c-white;
+  }
 }

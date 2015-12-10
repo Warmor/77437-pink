@@ -1,0 +1,83 @@
+.main-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  padding: 20px 0 62px;
+  &__logo{
+    color: transparent;
+    display: inline-block;
+    background: @c-white url(../img/logotype-blue-tablet.svg) no-repeat 50% 50%;
+    width: 146px;
+    height: 50px;
+  }
+}
+.social{
+  &__btn{
+    display: inline-block;
+    color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 3px solid @c-grey-border;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  &__btn--twitter{
+    background: @c-white url(../img/tw.png) no-repeat 50% 50%;
+  }
+  &__btn--facebook{
+    background: @c-white url(../img/fb.png) no-repeat 50% 50%;
+  }
+  &__btn--vector{
+    background: @c-white url(../img/vc.png) no-repeat 50% 50%;
+  }
+}
+.htmlacademy{
+  .center;
+  height: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  color: @c-text;
+  padding-bottom: 4px;
+  .academy-logo{
+    width: 28px;
+    height: 40px;
+    background: @c-white url(../img/htmlacademy.svg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-left: 15px;
+  }
+}
+.main-footer{
+  @media (min-width: @screen-sm){
+    flex-direction: row;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 131px;
+    &__logo{
+      margin-bottom: 17px;
+    }
+    .social{
+      margin-right: 15px;
+      &__btn{
+      }
+    }
+  }
+  @media (min-width: @screen-md){
+    height: 198px;
+    padding: 0 10px;
+    &__logo{
+      background: @c-white url(../img/logotype-blue-desktop.svg) no-repeat 50% 50%;
+    }
+    .htmlacademy{
+      font-size: 18px;
+    }
+    .social{
+      margin-right: 0;
+      margin-left: 7px;
+      &__btn{
+      }
+    }
+  }
+}
