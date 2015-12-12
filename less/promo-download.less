@@ -31,6 +31,9 @@
   height: 663px;
   justify-content: space-between;
   background: url(../img/iphone-hand-mobile.png) no-repeat 0% 28%;
+  .promo__header{
+    margin: 20px 0 0;
+  }
   @media only screen and (min-resolution: 1.25dppx){
     background: url(../img/iphone-hand-mobile@2x.png) no-repeat 0% 28%;
     background-size: 258px 286px;
@@ -49,7 +52,7 @@
       font-size: 40px;
       width: 300px;
       padding: 0 30px;
-      margin: 0 0 32px 0;
+      margin: 0 0 31px 0;
     }
     @media (min-resolution: 1.25dppx){
       background: url(../img/iphone-hand-tablet@2x.png) no-repeat 50% 100%;
@@ -86,6 +89,14 @@
     text-decoration: none;
     font-weight: bold;
     line-height: 47px;
+    outline: none;
+    &:hover{
+      background: @c-white;
+      color: @c-pink;
+    }
+    &:active{
+      color: @c-pink-opasity30;
+    }
   }
   &__item{
     font-size: 0;
@@ -93,7 +104,6 @@
     height: 57px;
     display: inline-block;
     vertical-align: top;
-
     &--apple{
       background: url(../img/apple-logo.svg) no-repeat 50% 50%;
       margin-right: 25px;

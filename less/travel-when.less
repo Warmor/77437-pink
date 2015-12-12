@@ -16,6 +16,11 @@
   &__input{
     .input;
   }
+  &__input[disabled]{
+    &:hover{
+      border: 2px solid @c-grey-border;
+    }
+  }
   @media (min-width: @screen-sm){
     position: relative;
     border: 2px solid @c-grey-border;
