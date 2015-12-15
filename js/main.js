@@ -2,7 +2,7 @@
 
   var elements = document.querySelectorAll(".counter");
   for (var i = 0; i < elements.length; i++) {
-   initNumberField(elements[i]);
+    initNumberField(elements[i]);
   }
   function initNumberField(parent) {
     var input = parent.querySelector("input");
@@ -14,6 +14,7 @@
     plus.addEventListener("click", function() {
       changeNumber(true);
     });
+    value-n
     function changeNumber(operation) {
       var value = Number(input.value);
       if (isNaN(value)) {
@@ -26,6 +27,4 @@
       }
     }
   }
-  
-  
 })();
