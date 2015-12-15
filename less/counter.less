@@ -26,11 +26,17 @@
   }
   &__input{
     .input;
-    .center;
     border-right: none;
     border-left: none;
     flex-grow: 1;
     padding-left: 0;
+    width: 10px;
+    text-align: center;
+    &--dif{
+      &:hover{
+        border: 2px solid @c-grey-border;
+      }
+    }
   }
   @media (min-width: @screen-sm){
     &__input{

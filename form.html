@@ -36,7 +36,7 @@
     <div class="promo"><h1 class="promo__header">Конкурс на самое безбашеное путешествие с Пинк</h1></div>
   </header>
   <main class="main-content">
-    <form class="main-form" action="">
+    <form class="main-form" action="https://echo.htmlacademy.ru/adaptive" enctype="multipart/form-data" method="post">
       <div class="layout">
         <h2 class="main-form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="hidden-xs">Пожалуйста, заполните форму ниже:</span></h2>
       </div>
@@ -61,17 +61,17 @@
           <section class="travel-app">
             <h2 class="travel-app__header">С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ? *</h2>
             <div class="travel-app__container">
-              <input class="input-radio hidden" type="radio" name="app" id="travel-app__ios">
+              <input class="input-radio hidden" type="radio" name="app" id="travel-app__ios" value="iOS">
               <label class="travel-app__label" for="travel-app__ios">
                 <span class="travel-app__radio"></span>
                 <p class="travel-app__text">Pink для iOS</p>
               </label>
-              <input class="input-radio hidden" type="radio" name="app" id="travel-app__and" checked>
+              <input class="input-radio hidden" type="radio" name="app" id="travel-app__and" value="Android" checked>
               <label class="travel-app__label" for="travel-app__and">
                 <span class="travel-app__radio"></span>
                 <p class="travel-app__text">Pink на Android</p>
               </label>
-              <input class="input-radio hidden" type="radio" name="app" id="travel-app__wp">
+              <input class="input-radio hidden" type="radio" name="app" id="travel-app__wp" value="Phone">
               <label class="travel-app__label" for="travel-app__wp">
                 <span class="travel-app__radio"></span>
                 <p class="travel-app__text">Windows Phone</p>
@@ -91,7 +91,7 @@
             <div class="travel-when__item">
               <div class="counter">
                 <button class="counter__btn counter__btn--minus" type="button">-</button>
-                <output class="counter__input" name="duration">10 дней</output>
+                <input class="counter__input" name="duration" value="10 дней"></input>
                 <button class="counter__btn counter__btn--plus" type="button">+</button>
               </div>
               <label class="travel-when__label travel-when__label--dif">ПРОДОЛЖИТЕЛЬНОСТЬ</label>
@@ -110,7 +110,7 @@
             <div class="travel-companion__container">
               <div class="counter">
                 <button class="counter__btn counter__btn--minus" type="button">-</button>
-                <output class="counter__input counter__input--dif" name="companion">2 чел</output>
+                <input class="counter__input counter__input--dif" name="companion" value="2 чел" disabled=""></input>
                 <button class="counter__btn counter__btn--plus" type="button">+</button>
               </div>
               <div class="companions">
@@ -122,11 +122,11 @@
                   <div class="right-column">
                     <div class="right-column__item">
                       <label class="right-column__label">ИМЯ: *</label>
-                      <input class="right-column__input" type="text" name="name" placeholder="Введите ваше имя" required>
+                      <input class="right-column__input" type="text" name="companion-name" placeholder="Введите ваше имя" required>
                     </div>
                     <div class="right-column__item">
                       <label class="right-column__label">ПРОЗВИЩЕ:</label>
-                      <input class="right-column__input" type="text" name="nick" placeholder="Ну как же без этого!">
+                      <input class="right-column__input" type="text" name="companion-nick" placeholder="Ну как же без этого!">
                     </div>
                   </div>
                   <div class="delete-column hidden-xs"><button class="delete" type="button">УДАЛИТЬ</button></div>
@@ -139,11 +139,11 @@
                   <div class="right-column">
                     <div class="right-column__item">
                       <label class="right-column__label">ИМЯ: *</label>
-                      <input class="right-column__input" type="text" name="name" placeholder="Введите ваше имя" required>
+                      <input class="right-column__input" type="text" name="companion-name" placeholder="Введите ваше имя" required>
                     </div>
                     <div class="right-column__item">
                       <label class="right-column__label">ПРОЗВИЩЕ:</label>
-                      <input class="right-column__input" type="text" name="nick" placeholder="Ну как же без этого!">
+                      <input class="right-column__input" type="text" name="companion-nick" placeholder="Ну как же без этого!">
                     </div>
                   </div>
                   <div class="delete-column hidden-xs"><button class="delete" type="button">УДАЛИТЬ</button></div>
@@ -264,5 +264,6 @@
       <a class="htmlacademy" href="">Разработано<span class="academy-logo"></span></a>
     </div>
   </footer>
+  <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
