@@ -57,6 +57,7 @@ a{
 .label{
   font-size: 14px;
   color: @c-pink;
+  font-weight: normal;
 }
 .input{
   font-size: 18px;
@@ -65,6 +66,13 @@ a{
   border-radius: 2px;
   height: 62px;
   padding-left: 20px;
+  outline: none;
+  &:hover{
+    border: 2px solid @c-pink;
+  }
+  &:focus{
+    border: 2px solid @c-gray-l;
+  }
 }
 .background-wrapper{
   width: 100%;

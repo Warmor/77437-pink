@@ -15,6 +15,18 @@
     font-weight: lighter;
     color: #d22856;
     text-decoration: none;
+    outline: none;
+    &--mail{
+      &:hover{
+        color: @c-gray-l;
+        text-decoration: underline;
+
+      }
+      &:active{
+        color: @c-gray-l;
+        opacity: .3;
+      }
+    }
   }
   @media (min-width: @screen-sm){
     display: flex;

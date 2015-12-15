@@ -21,9 +21,6 @@
       margin: auto;
       padding: 0;
     }
-    &__container{
-
-    }
   }
   @media (min-width: @screen-md){
     margin: 40px 10px;
@@ -70,6 +67,9 @@
     .center;
     padding: 0;
     width: 62px;
+    &:hover{
+      border: 2px solid @c-grey-border;
+    }
   }
   @media (min-width: @screen-sm){
     margin-right: 22px;
@@ -116,6 +116,15 @@
     background: none;
     border: none;
     outline: none;
+    &:hover{
+      color: @c-pink;
+      border-bottom: 1px solid @c-pink;
+    }
+    &:active{
+      color: @c-pink;
+      opacity: .3;
+      border-bottom: none;
+    }
   }
   @media (min-width: @screen-md){
     margin: 49px 0 0 35px;

@@ -1,4 +1,4 @@
-.navigation-layout{
+.navigation-wrapper{
   background-color: @c-black_90;
 }
 .navigation{
@@ -22,27 +22,32 @@
     @media (min-width: @screen-md){
       display: none;
     }
+    &:hover{
+      background: url(../img/menu-burger--hover.svg) no-repeat 50% 50%;
+    }
   }
   .logo{
     display: inline-block;
     order: 1;
     font-size: 0;
-    width: 75px;
-    height: 23px;
-    background: url(../img/logotype-white-mobile.svg) no-repeat;
-    margin-right: auto;
-    margin-left: 20px;
+    width: 144px;
+    height: 41px;
+    background: url(../img/logotype-white.svg) no-repeat;
+    margin: 18px auto 0 19px ;
     @media (min-width: @screen-sm){
-      background: url(../img/logotype-white-tablet.svg) no-repeat;
-      width: 146px;
-      height: 40px;
-      margin-bottom: 19px;
-      margin-left: 19px;
+      width: 145px;
+      margin: 0 auto 19px 20px;
     }
     @media (min-width: @screen-md){
-      background: url(../img/logotype-white-desktop.svg) no-repeat;
-      margin-left: 9px;
-      margin-bottom: 19px;
+      width: 146px;
+      margin: 0 0 17px 8px;
+    }
+    &:hover{
+      background: url(../img/logotype-white--hover.svg) no-repeat;
+    }
+    &:active{
+      opacity: 0.3;
+      background: url(../img/logotype-white.svg) no-repeat;
     }
   }
   .navbar{
@@ -72,9 +77,9 @@
       @media (min-width: @screen-md){
         margin-left: 68px;
       }
-      a {
+      a{
         display: block;
-        min-height: 63px;
+        height: 63px;
         line-height: 63px;
         text-decoration: none;
         color: @c-white;
@@ -84,32 +89,62 @@
         border-top: 1px solid #485461;
         box-shadow: 0 -1px 0 0 black;
         text-transform: uppercase;
+        &:hover{
+          color: @c-pink;
+        }
+        &:active{
+          color: @c-pink-opasity30;
+        }
         @media (min-width: @screen-md){
+          position: relative;
           background: none;
           border-top: none;
           box-shadow: none;
           font-weight: 400;
           text-transform: none;
+          height: 20px;
+          line-height: 20px;
+          &:after{
+            position: absolute;
+            top: 15px;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: @c-white;
+            opacity: 0;
+            transition: all 100ms;
+          }
+          &:hover{
+            color: @c-white;
+            &:after{
+              top: 30px;
+              opacity: 1;
+            }
+          }
+          &:active{
+            border: none;
+            margin-bottom:none;
+            color: rgba(255, 255, 255, 0.3);
+          }
         }
-      }
-      a:hover{
-        border-bottom: 2px solid @c-white;
-        margin-bottom: -2px;
-      }
-      a:active{
-        border: none;
-        margin-bottom:none;
-        color: rgba(255, 255, 255, 0.3);
       }
     }
   }
 }
-.inp-toogle:checked ~ .navbar{
+.inp-toogle:checked ~ .navigation-wrapper .navigation .navbar{
   top: 68px;
   opacity: 1;
   @media (min-width: @screen-sm){
     top: 110px;
   }
 }
-
-
+.inp-toogle:checked ~ .navigation-wrapper .navigation{
+  background: @c-gray-l;
+}
+.inp-toogle:checked ~ .navigation-wrapper .navigation .navigation__toogle{
+  background: url(../img/menu-cross.svg) no-repeat 50% 50%;
+  &:hover{
+    background: url(../img/menu-cross--hover.svg) no-repeat 50% 50%;
+  }
+}
