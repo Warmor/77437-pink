@@ -1,50 +1,156 @@
-.navigation{
+.navigation-wrapper{
   background-color: @c-black_90;
-  text-align: left;
+}
+.navigation{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 66px;
+  @media (min-width: @screen-sm){
+    height: 110px;
+  }
   &__toogle{
-    display: inline-block;
-    float: right;
+    color: @c-white;
+    order: 2;
     width: 50px;
     height: 25px;
-    background: url(../img/toogle.png) no-repeat;
-    border: none;
-    margin: 20px 22px;
+    background: url(../img/menu-burger.svg) no-repeat;
     cursor: pointer;
+    margin-right: 20px;
+    @media (min-width: @screen-md){
+      display: none;
+    }
+    &:hover{
+      background: url(../img/menu-burger--hover.svg) no-repeat 50% 50%;
+    }
+    &:active{
+      background: url(../img/menu-burger--hover.svg) no-repeat 50% 50%;
+      opacity: 0.3;
+    }
+  }
+  .logo{
+    display: inline-block;
+    order: 1;
+    font-size: 0;
+    width: 144px;
+    height: 41px;
+    background: url(../img/logotype-white.svg) no-repeat;
+    margin: 18px auto 0 19px ;
+    @media (min-width: @screen-sm){
+      width: 145px;
+      margin: 0 auto 19px 20px;
+    }
+    @media (min-width: @screen-md){
+      width: 146px;
+      margin: 0 0 17px 8px;
+    }
+    &:hover{
+      background: url(../img/logotype-white--hover.svg) no-repeat;
+    }
+    &:active{
+      opacity: 0.3;
+      background: url(../img/logotype-white.svg) no-repeat;
+    }
+  }
+  .navbar{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -300px;
+    order: 3;
+    opacity: 0;
+    transition: all 300ms;
+    @media (min-width: @screen-md){
+      position: static;
+      opacity: 1;
+      width: auto;
+      margin-right: 10px;
+      margin-top: -1px;
+    }
+    &__list{
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      @media (min-width: @screen-md){
+        flex-direction: row;
+      }
+    }
+    &__item{
+      @media (min-width: @screen-md){
+        margin-left: 68px;
+      }
+      a{
+        display: block;
+        height: 63px;
+        line-height: 63px;
+        text-decoration: none;
+        color: @c-white;
+        font-size: 18px;
+        font-weight: bold;
+        background: @c-gray-l;
+        border-top: 1px solid #485461;
+        box-shadow: 0 -1px 0 0 black;
+        text-transform: uppercase;
+        &:hover{
+          color: @c-pink;
+        }
+        &:active{
+          color: @c-pink-opasity30;
+        }
+        @media (min-width: @screen-md){
+          position: relative;
+          background: none;
+          border-top: none;
+          box-shadow: none;
+          font-weight: 400;
+          text-transform: none;
+          height: 20px;
+          line-height: 20px;
+          &:after{
+            position: absolute;
+            top: 15px;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: @c-white;
+            opacity: 0;
+            transition: all 100ms;
+          }
+          &:hover{
+            color: @c-white;
+            &:after{
+              top: 30px;
+              opacity: 1;
+            }
+          }
+          &:active{
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
+            &:after{
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
-.inp-toogle:checked ~ .navbar{
-  top: 68px;
+.inp-toogle:checked ~ .navigation-wrapper .navigation .navbar{
+  top: 66px;
   opacity: 1;
+  @media (min-width: @screen-sm){
+    top: 110px;
+  }
 }
-.logo{
-  display: inline-block;
-  padding: 20px 22px;
+.inp-toogle:checked ~ .navigation-wrapper .navigation{
+  background: @c-gray-l;
 }
-.navbar{
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -260px;
-  opacity: 0;
-  transition: all 300ms;
-}
-.navbar__list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.navbar__item{
-    a {
-      display: block;
-      min-height: 63px;
-      line-height: 63px;
-      text-decoration: none;
-      text-align: center;
-      color: @c-white;
-      font-size: 13pt;
-      font-weight: bold;
-      background: @c-gray-l;
-      border-top: 1px solid #485461;
-      box-shadow: 0 -1px 0 0 black;
-    }
+.inp-toogle:checked ~ .navigation-wrapper .navigation .navigation__toogle{
+  background: url(../img/menu-cross.svg) no-repeat 50% 50%;
+  &:hover{
+    background: url(../img/menu-cross--hover.svg) no-repeat 50% 50%;
+  }
 }
