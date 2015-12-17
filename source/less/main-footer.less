@@ -49,9 +49,20 @@
   text-decoration: none;
   color: @c-text;
   padding-bottom: 4px;
+  &:hover{
+    .academy-logo{
+      background: @c-white url(../img/htmlacademy-hover.svg) no-repeat 50% 50%;
+      background-size: cover;
+    }
+  }
+  &:active{
+    .academy-logo{
+      opacity: .3;
+    }
+  }
   .academy-logo{
-    width: 28px;
-    height: 40px;
+    width: 29px;
+    height: 41px;
     background: @c-white url(../img/htmlacademy.svg) no-repeat 50% 50%;
     background-size: cover;
     margin-left: 15px;
@@ -70,6 +81,13 @@
     .social{
       margin-right: 15px;
       &__btn{
+      }
+    }
+    .htmlacademy{
+      padding: 0;
+      .academy-logo{
+        margin-left: 14px;
+        background-position: 49% 4px;
       }
     }
   }

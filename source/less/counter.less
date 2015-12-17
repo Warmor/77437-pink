@@ -9,20 +9,25 @@
       outline: none;
     }
     &:hover{
-      background-color: @c-mine-bg;
+      border-color: @c-gray-l;
+    }
+    &:active{
+      border: none;
     }
   }
   &__btn--minus{
     background: @c-white url(../img/minus.png) no-repeat 50% 50%;
-    &:hover{
+    &:active{
       background: @c-gray-l url(../img/minus-white.png) no-repeat 50% 50%;
     }
+
   }
   &__btn--plus{
     background: @c-white url(../img/plus.png) no-repeat 50% 50%;
-    &:hover{
+    &:active{
       background: @c-gray-l url(../img/plus-white.png) no-repeat 50% 50%;
     }
+
   }
   &__input{
     .input;
