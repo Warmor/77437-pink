@@ -1,0 +1,196 @@
+.option-wrapper{
+  background: url(../img/triangle-grey.svg) no-repeat 100% 100%;
+  background-size: cover;
+  @media (min-width: @screen-sm){
+    background-position: 100% 100%;
+  }
+  @media (min-width: @screen-md){
+    background-position: 99% 100%;
+  }
+}
+.option{
+  padding-top: 95px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__table{
+    border-collapse: collapse;
+    width: 825px;
+    position: relative;
+    transition: left 300ms;
+  }
+  &__row{
+    background: @c-gray-l;
+  }
+  &__th{
+    width: 275px;
+    height: 98px;
+    position: relative;
+    color: @c-white;
+    border: 2px solid @c-mine-bg;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+    &--sm-md{
+      display: none;
+    }
+  }
+  &__prices{
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &__title{
+    font-size: 18px;
+  }
+  &__th--hit{
+    &:before{
+      content: "ХИТ";
+      height: 30px;
+      width: 100px;
+      line-height: 30px;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: -25px;
+      transform: rotate(-45deg);
+      background: #d22856;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &__td{
+    height: 61px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    background: @c-white;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    padding: 0 20px;
+    &--yes{
+      background: @c-white url(../img/yes.svg) no-repeat 93% 50%;
+    }
+    &--no{
+      background: @c-white url(../img/no.svg) no-repeat 93% 46%;
+    }
+    &--sm-md{
+      display: none;
+    }
+  }
+  &__btn{
+    padding: 33px 0;
+    font-size: 0;
+    label{
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      background: #bec2c7;
+      border: 3px solid @c-mine-bg;
+      border-radius: 50%;
+      margin: 5px;
+      cursor: pointer;
+      &:hover{
+        background: #7e868f;
+      }
+    }
+  }
+  &__radio-4:checked ~ .option__table{
+    left: 280px;
+  }
+  &__radio-5:checked ~ .option__table{
+    left: 0px;
+  }
+  &__radio-6:checked ~ .option__table{
+    left:-280px;
+  }
+
+  &__radio-5:checked ~ .option__btn .b,
+  &__radio-6:checked ~ .option__btn .c,
+  &__radio-4:checked ~ .option__btn .a{
+    background: @c-white;
+    border: 3px solid @c-gray-l;
+  }
+}
+@media (min-width: @screen-sm){
+  .option{
+    padding: 93px 0 66px;
+    &__table{
+      position: static;
+      width: 620px;
+    }
+    &__th{
+      width: 155px;
+      height: 79px;
+      &--sm-md{
+        display: table-cell;
+        background: @c-mine-bg;
+      }
+    }
+    &__th--hit{
+      &:before{
+        top: 3px;
+        left: -30px;
+      }
+    }
+    &__title{
+      font-size: 16px;
+    }
+    &__prices{
+      font-size: 18px;
+    }
+    &__td{
+      height: 47px;
+      padding: 0 15px;
+      &--yes,
+      &--no{
+        font-size: 0;
+        background-position: 50% 50%;
+      }
+      &--sm-md{
+        display: table-cell;
+        border: 2px solid #e5e5e5;
+        font-size: 14px;
+      }
+    }
+    &__btn{
+      display: none;
+    }
+  }
+}
+@media (min-width: @screen-md){
+  .option{
+    padding: 151px 0 95px;;
+    &__table{
+      width: 940px;
+    }
+    &__th{
+      width: 235px;
+      height: 98px;
+    }
+    &__th--hit{
+      &:before{
+        top: 13px;
+        left: -29px;
+        height: 30px;
+        width: 110px;
+      }
+    }
+    &__title{
+      font-size: 18px;
+    }
+    &__prices{
+      font-size: 24px;
+    }
+    &__td{
+      font-weight: 400;
+      height: 61px;
+      padding: 0 21px;
+      &--sm-md{
+        font-size: 18px;
+      }
+    }
+  }
+}
