@@ -24,7 +24,7 @@ gulp.task("build", function() {
       autoprefixer({browsers: "last 3 versions"})
     ]))
     .pipe(gulp.dest("build/css"));
-  return gulp.src("source/**/*.html").pipe(gulp.dest("build"));
+  gulp.src("source/**/*.html").pipe(gulp.dest("build"));
 });
 
 gulp.task("start", ["style"], function() {
