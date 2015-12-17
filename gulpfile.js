@@ -16,6 +16,17 @@ gulp.task("style", function() {
     .pipe(gulp.dest("css"));
 });
 
+gulp.task("build", function() {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer({browsers: "last 3 versions"})
+    ]))
+    .pipe(gulp.dest("build/css"));
+  gulp.src("source/**/*.html").pipe(gulp.dest("build"));
+});
+
 gulp.task("start", ["style"], function() {
   gulp.watch("less/**/*.less", ["style"]);
 });

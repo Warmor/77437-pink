@@ -1,0 +1,132 @@
+.travel-companion{
+  .grid;
+  &__header{
+    .label;
+    line-height: 1;
+    padding: 38px 0px 35px;
+  }
+  @media (min-width: @screen-sm){
+    position: relative;
+    border: 2px solid @c-grey-border;
+    border-radius: 2px;
+    margin: 40px 20px;
+    padding: 42px 57px 32px;
+    &__header{
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      width: 260px;
+      background: @c-white;
+      margin: auto;
+      padding: 0;
+    }
+  }
+  @media (min-width: @screen-md){
+    margin: 40px 10px;
+    padding: 42px 57px 38px;
+    &__header{
+      top: -7px;
+    }
+  }
+}
+.companions{
+  margin-top: 50px;
+  border-top: 2px solid @c-grey-border;
+  padding: 12px 0 26px;
+  @media (min-width: @screen-sm){
+    margin-top: 42px;
+    padding: 12px 0 0;
+  }
+  @media (min-width: @screen-md){
+    margin-top: 43px;
+    padding: 29px 0 0;
+  }
+}
+.companion-quantity{
+  display: flex;
+  flex-direction: row;
+  padding: 21px 0 0;
+  @media (min-width: @screen-sm){
+    padding: 22px 0 0;
+  }
+  @media (min-width: @screen-md){
+    padding: 5px 0 0;
+  }
+}
+.left-column{
+  display: flex;
+  flex-direction: column;
+  margin-right: -2px;
+  &__neader{
+    .label;
+    margin-bottom: 12px;
+  }
+  &__number{
+    .input;
+    .center;
+    padding: 0;
+    width: 62px;
+    &:hover{
+      border: 2px solid @c-grey-border;
+    }
+  }
+  @media (min-width: @screen-sm){
+    margin-right: 22px;
+    &__number{
+      background: @c-mine-bg;
+    }
+  }
+  @media (min-width: @screen-md){
+    margin-right: 20px;
+  }
+}
+.right-column{
+  &__item{
+    display: flex;
+    flex-direction: column;
+  }
+  &__label{
+    .label;
+    margin: 0 auto 12px 23px;
+  }
+  &__input{
+    .input;
+    padding-left: 22px;
+    margin-bottom: 21px;
+    width: 220px;
+  }
+  @media (min-width: @screen-sm){
+    &__input{
+      width: 300px;
+    }
+  }
+  @media (min-width: @screen-md){
+    display: flex;
+    flex-direction: row;
+    &__item{
+      margin-right: 20px;
+    }
+  }
+}
+.delete-column{
+  margin: 49px 0 0 51px;
+  .delete{
+    font-size: 14px;
+    background: none;
+    border: none;
+    outline: none;
+    &:hover{
+      color: @c-pink;
+      border-bottom: 1px solid @c-pink;
+    }
+    &:active{
+      color: @c-pink;
+      opacity: .3;
+      border-bottom: none;
+    }
+  }
+  @media (min-width: @screen-md){
+    margin: 49px 0 0 35px;
+  }
+}

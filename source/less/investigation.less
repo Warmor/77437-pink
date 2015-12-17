@@ -1,0 +1,60 @@
+.investigation-wrapper{
+  display: none;
+  @media (min-width: @screen-sm){
+    display: block;
+    background: @c-white;
+    @media (min-width: @screen-md){
+      background: @c-mine-bg;
+    }
+  }
+}
+.investigation{
+  @media (min-width: @screen-sm){
+    display: block;
+    min-height: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: url(../img/timer-tablet.png) no-repeat 5% 50%;
+    &__inner-wrapper{
+      width: 300px;
+      text-align: left;
+      margin: 0px 31px 14px 0;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 36px;
+      margin: 0 0 10px;
+      padding-right: 100px;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 11px;
+    }
+  }
+  @media (min-width: @screen-md){
+    min-height: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: url(../img/timer-desktop.png) no-repeat 1% 49%;
+    &__inner-wrapper{
+      width: 530px;
+      text-align: left;
+      margin: 44px 54px 0 0;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 30px;
+      margin: 0 0 24px;
+    }
+    &__text{
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0 0 35px;
+    }
+  }
+}
