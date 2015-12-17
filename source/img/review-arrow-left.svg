@@ -8,7 +8,7 @@
   #active{
     opacity: 0;
   }
-  @media (min-width: 26px){
+  @media (min-width: 22px){
     #normal{
       opacity: 0;
     }
@@ -16,7 +16,7 @@
       opacity: 1;
     }
   }
-  @media (min-width: 27px){
+  @media (min-width: 23px){
     #hover{
       opacity: 0;
     }

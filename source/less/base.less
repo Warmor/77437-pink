@@ -19,9 +19,11 @@ a{
 .hidden{
   display: none;
 }
+// Используется только на главной странице для скрытия футера в моб версии
+// его стили перекрываются, "base.less" находится выше по коду чем "main-form.less"
 .hidden-xs{
   @media (max-width: @screen-sm){
-    display: none !important;
+    display: none !important; 
     font-size: 0;
   }
 }
@@ -68,10 +70,10 @@ a{
   padding-left: 20px;
   outline: none;
   &:hover{
-    border: 2px solid @c-pink;
+    border: 2px solid @c-gray-l;
   }
   &:focus{
-    border: 2px solid @c-gray-l;
+    border: 2px solid @c-pink;
   }
 }
 .background-wrapper{

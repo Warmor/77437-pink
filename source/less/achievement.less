@@ -1,6 +1,8 @@
 .achievement{
   .grid;
   margin: 20px auto 25px;
+  font-size: 18px;
+  
   &__container{
     display: flex;
     flex-direction: column;
@@ -11,6 +13,7 @@
   }
   &__label{
     display: flex;
+    align-items: center;
     margin: 22px 0 21px;
     cursor: pointer;
     &:hover .achievement__check{
@@ -24,12 +27,7 @@
     width: 39px;
     height: 39px;
     border: 2px solid @c-grey-border;
-  }
-  &__text{
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
+    margin-right: 20px;
   }
   @media (min-width: @screen-sm){
     position: relative;

@@ -25,6 +25,10 @@
     &:hover{
       background: url(../img/menu-burger--hover.svg) no-repeat 50% 50%;
     }
+    &:active{
+      background: url(../img/menu-burger--hover.svg) no-repeat 50% 50%;
+      opacity: 0.3;
+    }
   }
   .logo{
     display: inline-block;
@@ -124,8 +128,10 @@
           }
           &:active{
             border: none;
-            margin-bottom:none;
             color: rgba(255, 255, 255, 0.3);
+            &:after{
+              opacity: 0;
+            }
           }
         }
       }
@@ -133,7 +139,7 @@
   }
 }
 .inp-toogle:checked ~ .navigation-wrapper .navigation .navbar{
-  top: 68px;
+  top: 66px;
   opacity: 1;
   @media (min-width: @screen-sm){
     top: 110px;
