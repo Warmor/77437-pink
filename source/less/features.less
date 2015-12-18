@@ -42,10 +42,8 @@
   justify-content: flex-start;
   align-items: center;
   min-height: 787px;
-  width: 290px;
   padding-top: 53px;
   &__item{
-    width: 290px;
     margin-top: 31px;
   }
   &__title{
@@ -118,6 +116,22 @@
       font-size: 18px;
       line-height: 30px;
       padding: 0 30px;
+    }
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  .features{
+    width: 290px;
+    .features__item{
+    width: 330px;
+    }
+  }
+  @media (min-width: @screen-md){
+    .features{
+      width: auto;
+      .features__item{
+      width: 302px;
+      }
     }
   }
 }
