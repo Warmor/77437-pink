@@ -5,12 +5,10 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-// var cmq = require("gulp-combine-media-queries");
 var minifyCss = require("gulp-minify-css");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var pngquant = require("imagemin-pngquant");
-var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 
 gulp.task("style", function() {
@@ -32,14 +30,13 @@ gulp.task("start", ["style" , "js"], function() {
 
 gulp.task("html", function() {
   gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("css", function() {
   return gulp.src("source/less/style.less")
     .pipe(less())
-    // .pipe(cmq())
+
     .pipe(postcss([
       autoprefixer({browsers: "last 2 versions"})
     ]))
