@@ -13,6 +13,9 @@
     margin-bottom: 35px;
     &:hover .travel-app__radio{
       border: 2px solid @c-gray-l;
+    }
+    &:active .travel-app__radio{
+      border: 2px solid @c-pink;
       &:before{
         content: "";
         display: inline-block;
@@ -22,9 +25,6 @@
         background: @c-pink;
         border-radius: 50%;
       }
-    }
-    &:active .travel-app__radio{
-      border: 2px solid @c-pink;
     }
   }
   &__radio{

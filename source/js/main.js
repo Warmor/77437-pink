@@ -68,7 +68,7 @@
   function delP() {
     var companionArray = doc.querySelectorAll('.companion-quantity');
     var i = companionArray.length;
-    companionArray[i-1].remove();
+    companionArray[i-1].parentNode.removeChild(companionArray[i-1]);
   };
   for (var i = 0; i < del.length; i++) {
     del[i].addEventListener('click', delButton);

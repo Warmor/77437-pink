@@ -8,3 +8,5 @@ Thumbs.db
 *.log
 css/*.css
 build/
+source/css
+source/js/*.min.js
