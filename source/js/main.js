@@ -30,17 +30,20 @@
     delP();
   });
   plus_p.addEventListener('click', function() {
-    changePInput(1);
-    addP();
-    var del = doc.querySelectorAll('.companions .delete');
-    for (var i = 0; i < del.length; i++) {
-      del[i].addEventListener('click', delButton);
-    };
+    if (parseInt(input_p.value) < 20) {
+      changePInput(1);
+      addP();
+      var del = doc.querySelectorAll('.companions .delete');
+      for (var i = 0; i < del.length; i++) {
+        del[i].addEventListener('click', delButton);
+      };
+    }; 
+    
   });
 
 
   function changePInput(a) {
-    if ((parseInt(input_p.value) + a >= 0) && (parseInt(input_p.value) + a <= 10)) {
+    if ((parseInt(input_p.value) + a >= 0) && (parseInt(input_p.value) + a <= 20)) {
       input_p.value = parseInt(input_p.value) + parseInt(a) + ' чел.';
     };
   };

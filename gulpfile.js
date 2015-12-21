@@ -35,8 +35,8 @@ gulp.task("html", function() {
 
 gulp.task("css", function() {
   return gulp.src("source/less/style.less")
+    .pipe(plumber())
     .pipe(less())
-
     .pipe(postcss([
       autoprefixer({browsers: "last 2 versions"})
     ]))
@@ -58,7 +58,7 @@ gulp.task("img", function() {
 });
 
 gulp.task("js", function() {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/main.js")
     .pipe(gulp.dest("build/js/"))
     .pipe(uglify())
     .pipe(rename("main.min.js"))
