@@ -1,0 +1,43 @@
+.pagination{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  &__item{
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid @c-grey-border;
+      border-radius: 2px;
+      color: @c-gray-l;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 700;
+      width: 63px;
+      height: 63px;
+    }
+    a:hover{
+      border: 2px solid @c-gray-l;
+    }
+    a:active{
+      border: 2px solid @c-pink;
+    }
+  }
+  .active{
+    a{
+      border: 2px solid @c-pink;
+    }
+  }
+  @media (min-width: @screen-sm){
+    justify-content: flex-start;
+    &__item{
+      margin-right: 10px;
+    }
+    &__decor{
+      text-align: left;
+      width: 60px;
+      font-weight: 700;
+    }
+  }
+}

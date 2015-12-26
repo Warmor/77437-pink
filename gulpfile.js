@@ -18,6 +18,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: "last 2 versions"})
     ]))
+    .pipe(gulp.dest("source/css"))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"));
 });
