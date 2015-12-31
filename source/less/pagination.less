@@ -41,3 +41,40 @@
     }
   }
 }
+.pagination--post{
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__item{
+    width: 130px;
+    a{
+      margin: 10px 0;
+      width: auto;
+    }
+  }
+  .back{
+    width: 280px;
+  }
+  @media (min-width: @screen-sm){
+    &__item{
+      width: 140px;
+    }
+    .prew{
+      order: 1;
+    }
+    .next{
+      order: 3;
+    }
+    .back{
+      width: 300px;
+      order: 2;
+    }
+  }
+  @media (min-width: @screen-md){
+    &__item{
+      width: 260px;
+    }
+    .back{
+      width: 270px;
+    }
+  }
+}

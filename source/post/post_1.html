@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Отзыв</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic" rel="stylesheet">
+  <link href="../css/style.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <input class="inp-toogle hidden" type="checkbox" id="toogle">
+    <div class="navigation-wrapper">
+      <div class="navigation layout">
+        <a class="logo" href="../index.html">PINK</a>
+        <label class="navigation__toogle" for="toogle"></label>
+        <nav  class="navbar">
+          <ul  class="navbar__list">
+            <li class="navbar__item">
+              <a href="../index.html">Информация</a>
+            </li>
+            <li class="navbar__item">
+              <a href="../blog.html">Блог</a>
+            </li>
+            <li class="navbar__item">
+              <a href="../index.html#review">Отзывы</a>
+            </li>
+            <li class="navbar__item">
+              <a href="../form.html">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="promo"><h1 class="promo__header">Блог путешественников, пользователей Пинк</h1></div>
+  </header>
+  <main class="post layout">
+    <article class="post-header">
+      <h2 class="post-header__title">Антон и Надя в Тайланде</h3>
+      <span class="post-header__date xs-only">ОПУБЛИКОВАННО: 6 МЕСЯЦЕВ НАЗАД</span>
+      <p class="post-header__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+    </article>
+    <article class="post-body">
+      <span class="post-header__date hidden-xs">ОПУБЛИКОВАННО: 6 МЕСЯЦЕВ НАЗАД</span>
+      <h3>ПРЕДЫСТОРИЯ</h3>
+      <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="#">skyscanner.ru</a> мы все-таки решились!</p>
+      <h3>ВЫБОР ОТЕЛЯ</h3>
+      <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
+      <ul>
+        <li><span>Point Yamu by Como (Пхукет)</span></li>
+        <li><span>Amari Vogue Hotel (Краби)</span></li>
+        <li><span>Photo Hotel (Пхукет)</span></li>
+      </ul>
+      <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
+      <blockquote>
+        <p>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть.   СПА отличный. Потрясающие виды.<br>
+        <span>Олег, г. Москва</span></p>
+      </blockquote>
+        <h3>МЕСТНАЯ ЕДА</h3>
+        <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
+    </article>
+    <section class="pagination pagination--post">
+      <div class="pagination__item pagination--post__item prew">
+        <a href="#">ПРЕД.</a></div>
+      <div class="pagination__item pagination--post__item next">
+        <a href="#">СЛЕД.</a></div>
+      <div class="pagination__item pagination--post__item back">
+        <a href="../blog.html">НАЗАД К СПИСКУ</a></div>
+    </section>
+  </main>
+  <footer class="main-footer layout">
+    <a class="main-footer__logo" href="index.html">pink</a>
+    <div class="social">
+      <a class="social__btn social__btn--twitter" href="#">twitter</a>
+      <a class="social__btn social__btn--facebook" href="#">facebook</a>
+      <a class="social__btn social__btn--vector" href="#">vector</a>
+    </div>
+    <div class="footer-developed">
+      <a class="htmlacademy" href="">Разработано<span class="academy-logo"></span></a>
+    </div>
+  </footer>
+</body>
+</html>

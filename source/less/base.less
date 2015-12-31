@@ -28,7 +28,11 @@ a{
     font-size: 0;
   }
 }
-
+.xs-only{
+  @media (min-width: @screen-sm){
+    display: none;
+  }
+}
 .md-only{
   font-size: 0;
   @media (min-width: @screen-md){
