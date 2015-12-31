@@ -33,6 +33,10 @@ gulp.task("html", function() {
   gulp.src("source/*.html")
     .pipe(gulp.dest("build"));
 });
+gulp.task("htmlP", function() {
+  gulp.src("source/post/*.html")
+    .pipe(gulp.dest("build/post"));
+});
 
 gulp.task("css", function() {
   return gulp.src("source/less/style.less")
@@ -70,7 +74,7 @@ gulp.task("js", function() {
 
 
 
-gulp.task("build", ["css", "html", "img", "js"])
+gulp.task("build", ["css", "html","htmlP", "img", "js"])
 
 // Оставьте эту строку в самом конце файла
 require("./.gosha");
