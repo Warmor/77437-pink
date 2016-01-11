@@ -55,7 +55,7 @@ gulp.task("css", function() {
 gulp.task("img", function() {
   return gulp.src("source/img/*")
     .pipe(imagemin({
-      optimizationLevel: 5,
+      optimizationLevel: 3,
       progressive: true,
       multipass: true,
       use: [pngquant()]
