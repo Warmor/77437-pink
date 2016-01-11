@@ -23,9 +23,10 @@ gulp.task("style", function() {
     .pipe(gulp.dest("source/css"));
 });
 
-gulp.task("start", ["style" , "js"], function() {
+gulp.task("start", ["style" , "jsForm", "jsSlider"], function() {
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/js/main.js", ["js"]);
+  gulp.watch("source/js/form.js", ["jsForm"]);
+  gulp.watch("source/js/slider.js", ["jsSlider"]);
 });
 
 
@@ -62,19 +63,26 @@ gulp.task("img", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("js", function() {
-  return gulp.src("source/js/main.js")
+gulp.task("jsForm", function() {
+  return gulp.src("source/js/form.js")
     .pipe(gulp.dest("build/js/"))
     .pipe(uglify())
-    .pipe(rename("main.min.js"))
+    .pipe(rename("form.min.js"))
+    .pipe(gulp.dest("build/js/"))
+    .pipe(gulp.dest("source/js/"));
+});
+gulp.task("jsSlider", function() {
+  return gulp.src("source/js/slider.js")
+    .pipe(gulp.dest("build/js/"))
+    // .pipe(uglify())
+    .pipe(rename("slider.min.js"))
     .pipe(gulp.dest("build/js/"))
     .pipe(gulp.dest("source/js/"));
 });
 
 
 
-
-gulp.task("build", ["css", "html","htmlP", "img", "js"])
+gulp.task("build", ["css", "html","htmlP", "img", "jsForm", "jsSlider"])
 
 // Оставьте эту строку в самом конце файла
 require("./.gosha");

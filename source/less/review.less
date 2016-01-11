@@ -2,6 +2,7 @@
   overflow: hidden;
   position: relative;
   &__inner-wrapper{
+    left: 0%;
     display: flex;
     position: relative;
     transition: all 300ms;
@@ -114,19 +115,18 @@
       }
     }
   }
-  &__radio-1:checked ~ .review__inner-wrapper{
-    left: 0%;
-  }
-  &__radio-2:checked ~ .review__inner-wrapper{
-    left: -100%;
-  }
-  &__radio-3:checked ~ .review__inner-wrapper{
-    left: -200%;
-  }
-  &__radio-1:checked ~ .review__btn .a,
-  &__radio-2:checked ~ .review__btn .b,
-  &__radio-3:checked ~ .review__btn .c{
-    background: @c-white;
-    border: 3px solid @c-gray-l;
-  }
 }
+.radio-checked{
+  background: @c-white !important;
+  border: 3px solid @c-gray-l !important;
+}
+.post1{
+  left: 0%;
+}
+.post2{
+  left: -100%;
+}
+.post3{
+  left: -200%;
+}
+
